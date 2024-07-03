@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Folclórico de Parintins</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Festival Folclórico de Parintins</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#event-details">Detalhes</a></li>
+                    <li><a href="#registration">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="event-details">
+        <div class="container">
+            <h2>Detalhes do Evento</h2>
+            <p>Data: 28 de junho de 2024</p>
+            <p>Local: Centro Cultural de Parintins, Amazonas</p>
+            <p>Descrição: Um festival tradicional com apresentações dos bois Garantido e Caprichoso, repleto de dança, música e muita cultura.</p>
+            <div class="image-container">
+                <img src="evento.png" alt="Parque Olímpico do Rio de Janeiro">
+            </div>
+        </div>
+    </section>
+
+    <section id="registration">
+        <div class="container">
+            <h2>Cadastro</h2>
+            <form id="registration-form" action="#" method="post" onsubmit="registerUser(event)">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Cadastrar</button>
+            </form>
+            <div id="success-message" class="success-message" style="display: none;">
+                <p>Cadastro realizado com sucesso!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> 2024 Bumba Meu Boi - Parintins. </p>
+            <div class="social">
+            </div>
+        </div>
+    </footer>
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+            const form = document.getElementById('registration-form');
+            const successMessage = document.getElementById('success-message');
+            const name = form.name.value;
+            form.reset();
+            successMessage.style.display = 'block';
+            successMessage.innerHTML = `<p>${name}, seu cadastro foi realizado com sucesso!</p>`;
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

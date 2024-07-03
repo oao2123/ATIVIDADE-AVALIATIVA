@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oktoberfest Blumenau</title>
+    <link rel="stylesheet" href="CSS.css">
+    <script>
+        function cadastrar(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = `A pessoa ${nome} foi cadastrada com sucesso!`;
+            alert(mensagem);
+            document.getElementById('cadastroForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Oktoberfest Blumenau</h1>
+    </header>
+    <main>
+        <section id="detalhes">
+            <img src="Oktoberfest Blumenau 2.jpg" alt="Oktoberfest Blumenau">
+            <p>Blumenau, Santa Catarina</p>
+            <p>A maior festa alemã das Américas, realizada em Blumenau, Santa Catarina.</p>
+        </section>
+        <section id="cadastro">
+            <h2>Cadastre-se para o evento</h2>
+            <form id="cadastroForm" onsubmit="cadastrar(event)">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

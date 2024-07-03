@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(45deg, #6ab04c, #26de81);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.evento {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.evento:hover {
+    transform: translateY(-10px);
+}
+
+.evento h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.evento img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.evento p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: #6ab04c;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+}
+
+#detalhes {
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#detalhes img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+#cadastro {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cadastro h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+#cadastroForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cadastroForm div {
+    margin-bottom: 1em;
+}
+
+#cadastroForm label {
+    margin-right: 1em;
+}
+
+#cadastroForm input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#cadastroForm button {
+    padding: 0.75em 1.5em;
+    background-color: #6ab04c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cadastroForm button:hover {
+    background-color: #4CAF50;
+}
